@@ -20,7 +20,7 @@ const BpmnModeler = () => {
     }, []);
 
     return (
-        <div ref={containerRef} style={{ boxShadow: "2px 6px 12px rgba(0, 0, 0, 0.3)" }}></div>
+        <div ref={containerRef} className='box-shadow'></div>
     );
 }
 

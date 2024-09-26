@@ -2,15 +2,6 @@ import React from 'react';
 import './Navigation.css';
 import { NavLink } from 'react-router-dom';
 
-const NavLinkWithActiveClass = ({ to, children }) => (
-    <NavLink
-        to={to}
-        className={({ isActive }) => isActive ? 'active' : ''}
-    >
-        {children}
-    </NavLink>
-);
-
 const Navigation = () => (
     <div className="navbar">
         <NavLinkWithActiveClass to="/">Home</NavLinkWithActiveClass>
@@ -20,3 +11,17 @@ const Navigation = () => (
 );
 
 export default Navigation;
+
+const NavLinkWithActiveClass = ({ to, children }) => (
+    <NavLink
+        to={to}
+        className={({ isActive }) => isActive ? 'active' : ''}
+    >
+        {children}
+    </NavLink>
+);
+
+NavLinkWithActiveClass.prototype = {
+    to: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+};

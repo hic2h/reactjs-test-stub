@@ -1,14 +1,13 @@
 import { Routes, Route, Navigate, Link } from "react-router-dom";
-import Navbar from './components/Navigation';
+import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
 import ModelerPage from './pages/ModelerPage';
-
-const FrameworksPage = () => <div>Frameworks Page</div>;
+import FrameworksPage from './pages/FrameworksPage';
 
 export default () => (
   <div>
-    <Navbar />
-    <hr />
+    <Navigation />
+    <hr className="box-shadow" />
     <div className="container">
       <Routes>
         <Route path="/" element={<HomePage />} />
